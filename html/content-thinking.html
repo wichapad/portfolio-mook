@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
   </head>
 
@@ -21,44 +22,13 @@
     .thinking-desc p {
       font-size: 14px;
       letter-spacing: 1px;
+      color: #555;
     }
-
-    .thinking-show-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem 5rem;
-    }
-
-    .thinking-show-text {
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .thinking-show-img {
-      background-color: grey;
-      width: 150px;
-      height: 200px;
-    }
-
-    .swiper {
-      width: 600px;
-      height: 400px;
-      position: relative;
-    }
-    .swiper-slide {
+    .swiper-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+      padding: 2rem 2rem;
     }
   </style>
 
@@ -77,66 +47,43 @@
       </div>
 
       <!-- section card -->
-      <div id="text-container">
-        <!-- <div id="slide-title"></div> -->
-        <div id="slide-description"></div>
-      </div>
 
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/600/400?random=1" alt="" />
-          </div>
+      <div class="swiper-container">
+        <div id="external-text-container">
+          <h2 id="slide-title"></h2>
+          <!-- <p id="slide-description"></p> -->
+        </div>
 
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/600/400?random=2" alt="" />
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              data-title="Educate"
+              data-description="สำรวจป่าไม้เขียวขจีและน้ำตกที่สวยงาม ค้นพบความสงบในใจกลางธรรมชาติ"
+            >
+              <img src="../assets/img/content-thinking1.jpg" alt="content1" />
+            </div>
+            <div
+              class="swiper-slide"
+              data-title="Showreels"
+              data-description="สัมผัสชีวิตในเมืองหลวงที่เต็มไปด้วยสีสัน แสงไฟระยิบระยับและสถาปัตยกรรมที่น่าทึ่ง"
+            >
+              <img src="../assets/img/content-thinking3.bmp" alt="content2" />
+            </div>
+            <div
+              class="swiper-slide"
+              data-title="Review"
+              data-description="ลิ้มลองอาหารท้องถิ่นที่หลากหลายและอร่อย การเดินทางของรสชาติที่ไม่เหมือนใคร"
+            >
+              <img src="../assets/img/content-thinking2.jpg" alt="content3" />
+            </div>
           </div>
+          <!-- <div class="swiper-pagination"></div>
 
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/600/400?random=3" alt="" />
-          </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
         </div>
       </div>
     </section>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
-        loop: true, // สำคัญมากสำหรับ auto-play และการวนลูป
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        cardsEffect: {
-          rotate: true,
-          slideShadows: true,
-          // perSlideOffset: 8,
-          // perSlideRotate: 2,
-        },
-        on: {
-          // เมื่อ Swiper เริ่มต้น ให้ตั้งค่า text ครั้งแรก
-          init: function () {
-            updateExternalText(this);
-          },
-          // เมื่อสไลด์มีการเปลี่ยนแปลง (ทั้งจากการ swipe หรือ autoplay)
-          slideChange: function () {
-            updateExternalText(this);
-          },
-        },
-      });
-    </script>
   </body>
 </html>
