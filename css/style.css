@@ -12,11 +12,11 @@ body{
 
 
 /* css section for content-thinking */
-#external-text-container {
+#external-text-container1 {
     text-align: center;
 }
 
-#external-text-container h2 {
+#external-text-container1 h2 {
     font-size: 30px;
 }
 
@@ -27,9 +27,9 @@ body{
 } */
 
 /* --- SWIPER SECTION CSS--- */
-.swiper {
-    width: 200px; /* ความกว้างของ Swiper */
-    height: 250px; /* ความสูงของ Swiper */
+#mySwiper1 {
+    width: 200px; 
+    height: 250px; 
     position: relative;
 }
 
@@ -40,7 +40,7 @@ body{
     background-color: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
 }
 
 .swiper-slide img {
@@ -56,3 +56,9 @@ body{
     color: #007aff !important;
     --swiper-navigation-size: 30px;
 } */
+
+#mySwiper2 {
+    width: 200px; 
+    height: 300px;
+    padding: 1rem 0;
+}
