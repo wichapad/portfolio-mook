@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+
+    <title>Document</title>
+  </head>
+
+  <style>
+    #mySwiper2 {
+      padding-bottom: 40px;
+    }
+
+    .swiper-slide {
+      width: 160px;
+      height: 240px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-slide:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <body>
+    <div class="container py-4 bg-dark">
+      <h3 class="text-white mb-3">หนังแนะนำ</h3>
+
+      <div class="swiper mySwiper" id="mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
+              alt="Movie 1"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
+              alt="Movie 2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
+              alt="Movie 3"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
+              alt="Movie 4"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
+              alt="Movie 5"
+            />
+          </div>
+          <!-- เพิ่มได้ไม่จำกัด -->
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper2", {
+      slidesPerView: 5,
+      centeredSlides: true,
+      spaceBetween: 16,
+      loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        reverseDirection: false, // ไปข้างหน้า
+      },
+      breakpoints: {
+        320: { slidesPerView: 2 },
+        640: { slidesPerView: 3 },
+        992: { slidesPerView: 4 },
+        1200: { slidesPerView: 5 },
+      },
+
+      speed: 4000, // ความเร็ว
+    });
+  </script>
+</html>
