@@ -1,4 +1,4 @@
-// import carouselGroup from "./data-carousel";
+import carouselGroup from "./data-carousel.js";
 
 // ฟังก์ชันโหลด section
 async function loadSection(id, file) {
@@ -34,27 +34,7 @@ async function initializePage() {
   await loadSection("thinking", "../html/content-thinking.html");
   await loadSection("creative", "../html/creative-product.html");
 
-  const images = [
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-    "../assets/background/blond-woman-pointing-laptop-screen.jpg",
-  ];
-
-  const wrapper = document.querySelector(".carousel-wrapper");
-  images.forEach((src) => {
-    const slide = document.createElement("div");
-    slide.className = "swiper-slide carousel-slide";
-    slide.innerHTML = `<img src="${src}" />`;
-    wrapper.appendChild(slide);
-  });
-
-  // ตรวจสอบว่า Swiper element อยู่ใน DOM แล้ว
+  //card
   const swiperElement1 = document.querySelector(".mySwiper1");
   if (swiperElement1) {
     if (swiperElement1.swiper) {
@@ -83,10 +63,29 @@ async function initializePage() {
         },
       },
     });
-    const swiperElement2 = document.getElementById("2-1");
-    if (swiperElement2) {
+
+    // carousel slide
+    document.querySelectorAll(".swiper.mySwiper2").forEach((swiperElement2) => {
+      const groupId = swiperElement2.dataset.id;
+      const images = carouselGroup[groupId];
+      console.log(images);
+
+      if (!images) return;
+
+      const wrapper = swiperElement2.querySelector(".carousel-wrapper");
+
+      images.forEach((src) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide carousel-slide";
+        slide.innerHTML = `<img src="${src}" />`;
+        wrapper.appendChild(slide);
+      });
+
       if (swiperElement2.swiper) swiperElement2.swiper.destroy(true, true);
-      var swiper2 = new Swiper(swiperElement2, {
+
+      const reverse = groupId === "2-2" || groupId === "2-4";
+
+      new Swiper(swiperElement2, {
         slidesPerView: 5,
         centeredSlides: true,
         spaceBetween: 16,
@@ -94,7 +93,7 @@ async function initializePage() {
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
-          reverseDirection: false, // ไปข้างหน้า
+          reverseDirection: reverse,
         },
         breakpoints: {
           320: { slidesPerView: 2 },
@@ -102,17 +101,14 @@ async function initializePage() {
           992: { slidesPerView: 4 },
           1200: { slidesPerView: 5 },
         },
-
-        speed: 3000, // ความเร็ว
+        speed: 3000,
       });
-    }
+    });
   } else {
     console.error(
       "Swiper element (.mySwiper) not found after loading content-thinking.html."
     );
   }
-
-  
 }
 
 // เรียกฟังก์ชันหลักเพื่อเริ่มต้นการโหลดและ initialization เมื่อ DOM พร้อม

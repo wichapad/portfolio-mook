@@ -78,3 +78,42 @@ const swiperElement2 = document.querySelector(".mySwiper2");
 
       speed: 3000, // ความเร็ว
     });
+
+
+    document.querySelectorAll(".swiper .mySwiper2").forEach((swiperEl) => {
+      const groupId = swiperEl.dataset.id;
+      const images = carouselGroup[groupId];
+
+      if (!images) return;
+
+      const wrapper = document.querySelector(".carousel-wrapper");
+      images.forEach((src) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide carousel-slide";
+        slide.innerHTML = `<img src="${src}" />`;
+        wrapper.appendChild(slide);
+      });
+
+      if (swiperEl.swiper) swiperEl.swiper.destroy(true, true);
+
+      const reverse = groupId === "2-2" || groupId === "2-4";
+
+      new Swiper(swiperEl, {
+        slidesPerView: 5,
+        centeredSlides: true,
+        spaceBetween: 16,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: reverse, // ไปข้างหน้า
+        },
+        breakpoints: {
+          320: { slidesPerView: 2 },
+          640: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+          1200: { slidesPerView: 5 },
+        },
+
+        speed: 3000, // ความเร็ว
+      });

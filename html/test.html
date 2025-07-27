@@ -38,48 +38,28 @@
     }
   </style>
   <body>
-    <div class="container py-4 bg-dark">
-      <h3 class="text-white mb-3">หนังแนะนำ</h3>
-
-      <div class="swiper mySwiper" id="mySwiper2">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
-              alt="Movie 1"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
-              alt="Movie 2"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
-              alt="Movie 3"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
-              alt="Movie 4"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="../assets/background/blond-woman-pointing-laptop-screen.jpg"
-              alt="Movie 5"
-            />
-          </div>
-          <!-- เพิ่มได้ไม่จำกัด -->
-        </div>
+     <section>
+      <div class="creative-header">
+        <h1>Creative Product</h1>
       </div>
-    </div>
+
+      <div class="swiper mySwiper2" id="2-1">
+        <div class="swiper-wrapper carousel-wrapper"></div>
+      </div>
+      <div class="swiper mySwiper2" id="2-2">
+        <div class="swiper-wrapper carousel-wrapper"></div>
+      </div>
+      <div class="swiper mySwiper2" id="2-3">
+        <div class="swiper-wrapper carousel-wrapper"></div>
+      </div>
+      <div class="swiper mySwiper2" id="2-4">
+        <div class="swiper-wrapper carousel-wrapper"></div>
+      </div>
+    </section>
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script>
     const swiper = new Swiper(".mySwiper2", {
       slidesPerView: 5,
