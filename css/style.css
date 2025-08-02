@@ -1,11 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #FFF5EE;
+body {
+  background-color: #fff5ee;
+}
+
+/* css section for content-thinking */
+#external-text-container1 {
+  text-align: center;
+}
+
+#external-text-container1 h2 {
+  font-size: 30px;
+}
+
+/* --- SWIPER SECTION CSS--- */
+#mySwiper1 {
+  width: 200px;
+  height: 250px;
+  position: relative;
+}
+
+.mySwiper1 .card-swiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mySwiper1 .card-swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mySwiper2 {
+  margin-bottom: 20px;
+}
+
+.mySwiper2 .carousel-slide {
+  width: 160px;
+  height: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mySwiper2 .carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* post carousel */
+#mySwiper3 {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper3 .post-slide {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mySwiper3 .post-slide img {
+  display: block;
+  width: 100%;
+  /* max-width: 300px; */
+  height: 400px;
+  border-radius: 10px;
+  object-fit: contain;
 }

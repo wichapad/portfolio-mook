@@ -11,12 +11,19 @@
       text-align: center;
     }
     .port-content {
-      background-color: black;
+      /* background-color: black; */
+      background-image:linear-gradient(
+            rgba(39, 39, 39, 0.6),
+            rgba(39, 39, 39, 0.6)
+          ), url('../assets/img/projectlead.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       color: #fff;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
-    .port-content-header h4 {
+    .port-content-header h2 {
       padding-top: 1rem;
       padding-bottom: 0.8rem;
       text-align: center;
@@ -40,11 +47,10 @@
       align-items: center;
       margin: 0.8rem 0 0.8rem 0;
     }
-    .video-content {
-      background-color: gray;
-      width: 100%;
-      max-width: 350px;
-      height: 200px;
+    .video-content iframe {
+      /* background-color: gray; */
+      
+      border-radius: 5px;
       flex-shrink: 0;
     }
 
@@ -70,11 +76,11 @@
   <body>
     <div class="container">
       <header class="port-header">
-        <h1>PORTFOLIO</h1>
+        <h2>PORTFOLIO</h2>
       </header>
       <section class="port-content">
         <div class="port-content-header">
-          <h4>Project Leadership</h4>
+          <h2>Project Leadership</h2>
         </div>
         <div class="content-desc">
           <div class="content-desc-first">
@@ -98,7 +104,9 @@
             </div>
           </div>
           <div class="video-container">
-            <div class="video-content"></div>
+            <div class="video-content">
+              <iframe src="https://drive.google.com/file/d/1gJxxVp_67SLewkDkr-C3aFwcH1Aikw04/preview" style="border:none" width="350" height="200" allow="autoplay"></iframe>
+            </div>
           </div>
           <div class="port-content-footer">
             <h4>Result</h4>

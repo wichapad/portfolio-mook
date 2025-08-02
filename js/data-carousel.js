@@ -1,0 +1,45 @@
+const carouselGroup = {
+  "2-1": [
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754047658/hiro7_d9mgmn.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754047656/hiro6_utovno.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754047655/hiro3_erswo6.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754047655/hiro5_aazaix.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754047654/hiro4_zri7wk.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754047654/hiro2_vhvqfg.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754047652/hiro1_apth6y.jpg",
+  ],
+  "2-2": [
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972774/seki4_fvwzux.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972470/seki9_r9iayl.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972470/seki8_d8tnqn.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972470/seki10_b5x3cm.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972469/seki7_ne6fht.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972469/seki6_fijxho.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972469/seki5_wcryxz.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972468/seki3_cc10in.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972469/seki2_qfx01m.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1753972468/seki1_hgi0d6.jpg",
+  ],
+  "2-3": [
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100931/haikal2_pzmffs.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100787/haikal9_qfpuc1.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100785/haikal3_wuufce.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100784/haikal4_ev9vsx.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100783/haikal7_rfsldz.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100782/haikal6_dmissv.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100780/haikal1_hqbiqn.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100779/haikal8_dwsgmy.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100779/haikal5_sktlun.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754100777/haikal10_jp14wz.jpg",
+  ],
+  "2-4": [
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754101247/P10_q7us4g.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754101247/P14_ubi6q4.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754101244/P12_xebbet.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754101241/P13_itbfs7.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754101239/P11_nqcehh.jpg",
+    "https://res.cloudinary.com/dhewaesxx/image/upload/v1754101237/P15_eeocae.jpg",
+  ],
+};
+
+export default carouselGroup;
