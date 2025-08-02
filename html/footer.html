@@ -6,38 +6,45 @@
     <title>Document</title>
   </head>
   <style>
-    .footer-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    .footer-header{
-        margin-bottom: 1rem;
+    .footer-header {
+      margin-bottom: 1rem;
     }
-    .footer-header h1{
-        font-size: 18px;
+    .footer-header h1 {
+      font-size: 18px;
     }
-    .social-content div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 12px;
-        font-size: 14px;
+    .social-content div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 12px;
+      font-size: 14px;
     }
-    .social-content img{
-        width: 100%;
-        max-width: 25px;
+    .social-content img {
+      width: 100%;
+      max-width: 25px;
     }
-    .social-content a{
-        margin-left: 10px;
+    .social-content a {
+      font-weight: 500;
+      margin-left: 10px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
     }
-    .social-content p{
-        margin-left: 10px; 
+    .social-content a:hover {
+      transform: scale(1.1);
     }
-    .footer-thank{
-        font-size: 18px;
-        font-weight: 700;
+    .social-content p {
+      margin-left: 10px;
+      font-weight: 500;
+    }
+    .footer-thank {
+      font-size: 18px;
+      font-weight: 700;
     }
   </style>
   <body>
@@ -48,19 +55,56 @@
       <div class="social-content">
         <div class="facebook">
           <img src="../assets/img/Logo/facebook.png" alt="" />
-          <a href="">Jainim Dida</a>
+          <a
+            href="https://www.facebook.com/jainim.didazz"
+            target="_blank"
+            style="
+              background: linear-gradient(90deg, #1877f2, #145dbf);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+            >Jainim Dida</a
+          >
         </div>
         <div class="instagram">
           <img src="../assets/img/Logo/instagram.png" alt="" />
-          <a href="">Jainimdida</a>
+          <a
+            href="https://www.instagram.com/jiaojiaoontheroad/"
+            target="_blank"
+            style="
+              background: radial-gradient(
+                circle at 30% 107%,
+                #fd5949 45%,
+                #d6249f 60%,
+                #285aeb 90%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+            >JiaoJiaoOnTheRoad</a
+          >
         </div>
         <div class="tiktok">
           <img src="../assets/img/Logo/tik-tok.png" alt="" />
-          <a href="">JiaoJiao On The Road</a>
+          <a
+            href="https://www.tiktok.com/@jainimdida"
+            target="_blank"
+            style="
+              background: radial-gradient(
+                circle,
+                #69c9d0 10%,
+                #ee1d52 40%,
+                #000000 70%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+            >JiaoJiao On The Road</a
+          >
         </div>
         <div class="email">
           <img src="../assets/img/Logo/mail.png" alt="" />
-          <a href="">Chutipa.jain</a>
+          <a href="" style="color: #1877f2;">Chutipa.jain</a>
         </div>
         <div class="phone">
           <img src="../assets/img/Logo/phone-vibration.png" alt="" />
