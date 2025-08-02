@@ -1,4 +1,5 @@
 import carouselGroup from "./data-carousel.js";
+import postcarousel from "./data-postproduct.js";
 
 // ฟังก์ชันโหลด section
 async function loadSection(id, file) {
@@ -33,6 +34,8 @@ async function initializePage() {
   await loadSection("portfolio", "../html/portfolio-main.html");
   await loadSection("thinking", "../html/content-thinking.html");
   await loadSection("creative", "../html/creative-product.html");
+  await loadSection("postproduct", "../html/post-product.html");
+  await loadSection("footer", "../html/footer.html");
 
   //card
   const swiperElement1 = document.querySelector(".mySwiper1");
@@ -104,11 +107,48 @@ async function initializePage() {
         speed: 3000,
       });
     });
+
+    const images = postcarousel;
+    const wrapper = document.querySelector(".post-wrapper");
+    images.forEach((src) => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide post-slide";
+      slide.innerHTML = `<img src="${src}" alt="image" />`;
+      wrapper.appendChild(slide);
+    });
+    var swiper = new Swiper(".mySwiper3", {
+      slidesPerView: 1,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   } else {
     console.error(
       "Swiper element (.mySwiper) not found after loading content-thinking.html."
     );
   }
+
+  document.querySelectorAll(".readmore-list").forEach((list) => {
+    const limit = parseInt(list.dataset.limit) || 3;
+    const items = list.querySelectorAll("li");
+    const btn = list.nextElementSibling;
+
+    function updateDisplay(showAll) {
+      items.forEach((items, i) => {
+        items.style.display = showAll || i < limit ? "list-item" : "none";
+      });
+      btn.textContent = showAll ? "Read less" : "Read more";
+    }
+    // initial state
+    updateDisplay(false);
+
+    btn.addEventListener("click", () => {
+      const isShowingAll = btn.textContent === "Read less";
+      updateDisplay(!isShowingAll);
+    });
+  });
 }
 
 // เรียกฟังก์ชันหลักเพื่อเริ่มต้นการโหลดและ initialization เมื่อ DOM พร้อม
