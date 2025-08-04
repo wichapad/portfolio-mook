@@ -33,7 +33,7 @@ body {
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .mySwiper1 .card-swiper img {
@@ -73,15 +73,18 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
+  
 }
 
 .mySwiper3 .post-slide img {
   display: block;
   width: 100%;
-  /* max-width: 300px; */
-  height: 400px;
+  max-width: 280px;
   border-radius: 10px;
-  object-fit: contain;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  */
+  object-fit: cover;
+}
+.mySwiper3 .swiper-button-post{
+  color: #000;
 }
