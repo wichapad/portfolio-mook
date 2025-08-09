@@ -86,8 +86,6 @@ async function initializePage() {
 
       if (swiperElement2.swiper) swiperElement2.swiper.destroy(true, true);
 
-      const reverse = groupId === "2-2" || groupId === "2-4";
-
       new Swiper(swiperElement2, {
         slidesPerView: 5,
         centeredSlides: true,
@@ -96,7 +94,6 @@ async function initializePage() {
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
-          reverseDirection: reverse,
         },
         breakpoints: {
           320: { slidesPerView: 2 },
@@ -104,10 +101,11 @@ async function initializePage() {
           992: { slidesPerView: 4 },
           1200: { slidesPerView: 5 },
         },
-        speed: 3000,
+        speed: 4000,
       });
     });
 
+    // สำหรับ Mobile/Tablet
     const images = postcarousel;
     const wrapper = document.querySelector(".post-wrapper");
     images.forEach((src) => {
@@ -124,12 +122,23 @@ async function initializePage() {
         prevEl: ".swiper-button-prev",
       },
     });
+
+    // สำหรับ desktop
+  const staticContainer = document.querySelector('.static-container');
+  images.forEach((img) =>{
+    const staticImage = document.createElement('div');
+    staticImage.className = "post-static";
+    staticImage.innerHTML = `<img src="${img}" alt= "img"/>`;
+    staticContainer.appendChild(staticImage);
+  })
   } else {
     console.error(
       "Swiper element (.mySwiper) not found after loading content-thinking.html."
     );
   }
+  
 
+  // Card about
   document.querySelectorAll(".readmore-list").forEach((list) => {
     const limit = parseInt(list.dataset.limit) || 3;
     const items = list.querySelectorAll("li");

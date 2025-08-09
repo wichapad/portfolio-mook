@@ -1,29 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    .post-container{
-      margin: 0 1rem;
+<style>
+  .mySwiper3 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+  }
+  .post-header {
+    text-align: center;
+  }
+
+  .static-container {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .static-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      place-items: center;
     }
-    .post-header{
-      text-align: center;
+    .mySwiper3 {
+      display: none;
     }
-  </style>
-  <body>
-    <section class="post-container">
-      <div class="post-header">
-        <h1>Post Production & Editing</h1>
-      </div>
-      <div class="swiper mySwiper3" id="mySwiper3">
-        <div class="swiper-wrapper post-wrapper">
-        </div>
-        <div class="swiper-button-next swiper-button-post"></div>
-        <div class="swiper-button-prev swiper-button-post"></div>
-      </div>
-    </section>
-  </body>
-</html>
+    .static-container .post-static img {
+      /* display: block;
+      width: 100%; */
+      max-width: 280px;
+      border-radius: 10px;
+      /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  */
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .static-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+</style>
+<body>
+  <section class="post-container">
+    <div class="post-header">
+      <h1>Post Production & Editing</h1>
+    </div>
+    <!-- สำหรับ desktop -->
+    <div class="static-container"></div>
+    <!-- สำหรับ Mobile / tablet -->
+    <div class="swiper mySwiper3" id="mySwiper3">
+      <div class="swiper-wrapper post-wrapper"></div>
+      <div class="swiper-button-next swiper-button-post"></div>
+      <div class="swiper-button-prev swiper-button-post"></div>
+    </div>
+  </section>
+</body>
